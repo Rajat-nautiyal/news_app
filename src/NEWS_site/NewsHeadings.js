@@ -14,7 +14,7 @@ export const Headings = ({ handleMainPage }) => {
             className="eachHeading" onClick={() => handleMainPage(article)} key={article.url}
           >                              {/* handleMainPage is used to send data of title to main page */}
             <img
-                src={article.urlToImage}
+                src={article.image}
                 height="80px"
                 width='240px'
               /><div>{article.title}</div>

@@ -26,31 +26,31 @@ export const MainPage = () => {
    console.log(date)
       
     if (type === "Business") {
-      API = `https://newsapi.org/v2/everything?q=business&from=${date}&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=Business.`;
     } else if (type === "Celebrities") {
-      API = `https://newsapi.org/v2/everything?q=celebrities&from=${date}&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=Celebrities.`;
     } else if (type === `Technology`) {
-      API = `https://newsapi.org/v2/everything?q=technology&from=${date}&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=Technology.`;
     } else if (type === `Education`) {
-      API = `https://newsapi.org/v2/everything?q=education&from=${date}&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
     }else if (type === `india`) {
-      API = `https://newsapi.org/v2/top-headlines?country=in&from=${date}&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
     }else if (type === `france`) {
-      API = `https://newsapi.org/v2/everything?q=fr&from=${date}&language=en&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
     }else if (type === `japan`) {
-      API = `https://newsapi.org/v2/top-headlines?country=jp&from=${date}&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
     }else if (type === `USA`) {
-      API = `https://newsapi.org/v2/top-headlines?country=us&from=${date}&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
     }else if (type === `russia`) {
-      API = `https://newsapi.org/v2/top-headlines?country=ru&from=${date}&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
     }else if (type === `korea`) {
-      API = `https://newsapi.org/v2/top-headlines?country=kr&from=${date}&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
     }else if (type === `ukraine`) {
-      API = `https://newsapi.org/v2/top-headlines?country=ua&from=${date}&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
     }else if (type === `britain`) {
-      API = `https://newsapi.org/v2/top-headlines?country=gb&from=${date}&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
     }
-    else{ API = `https://newsapi.org/v2/everything?q=BBC&from=${date}&sortBy=popularity&apiKey=3552f797383b4fa7a08da1b7175650f6`
+    else{ API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.6`
           setSelectedArticle(null) };
 
     try {
@@ -120,15 +120,14 @@ useEffect(() => {
             <h3 className="title">{selectedArticle.title}</h3>
             <div>
               <img
-                src={selectedArticle.urlToImage}
+                src={selectedArticle.image}
                 alt="Loading"
                 height="340px"
                 width="800px"
               />
             </div>
-            <p>{selectedArticle.description}</p>
+            <p>{selectedArticle.text}</p>
              
-            <p style={{padding:"0px"}}>{selectedArticle.content}</p>
             <div>
               <div className="click" onClick={click}>click to read full article</div>
             </div>
@@ -138,15 +137,14 @@ useEffect(() => {
             <h3 className="title">{articleData[0].title}</h3>
             <div>
               <img
-                src={articleData[0].urlToImage}
+                src={articleData[0].image}
                 alt="Loading"
                 height="340px"
                 width="800px"
               />
             </div>
-            <p style={{paddingBottom:"0px"}}>{articleData[0].description}</p>
+            <p style={{paddingBottom:"0px"}}>{articleData[0].text}</p>
            
-            <p style={{padding:"0px"}}>{articleData[0].content}</p>
             <div>
               <div className="click" onClick={click}>click to read full article</div>
             </div>

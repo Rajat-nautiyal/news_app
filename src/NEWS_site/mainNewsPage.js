@@ -26,37 +26,37 @@ export const MainPage = () => {
    console.log(date)
       
     if (type === "Business") {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=Business.`;
+      API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     } else if (type === "Celebrities") {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=Celebrities.`;
+      API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     } else if (type === `Technology`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=Technology.`;
+      API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     } else if (type === `Education`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=Education.`;
+      API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     }else if (type === `india`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=india.`;
+      API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     }else if (type === `france`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=france.`;
+      API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     }else if (type === `japan`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
+      API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     }else if (type === `USA`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
+      API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     }else if (type === `russia`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
+      API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     }else if (type === `korea`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
+      API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     }else if (type === `ukraine`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
+      API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     }else if (type === `britain`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
+      API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     }
-    else{ API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea`
+    else{ API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`
           setSelectedArticle(null) };
 
     try {
       const response = await fetch(API);
       const data = await response.json();
-      setData(data.news); //passing fetched data to articleData(which is used in useState)
+      setData(data.articles); //passing fetched data to articleData(which is used in useState)
       setSelectedArticle(null)
     } catch (error) {
       console.log(error);
@@ -126,7 +126,9 @@ useEffect(() => {
                 width="800px"
               />
             </div>
-            <p>{selectedArticle.text}</p>
+            <p>{selectedArticle.description}</p>
+
+            <p>{selectedArticle.content}</p>
              
             <div>
               <div className="click" onClick={click}>click to read full article</div>
@@ -143,8 +145,9 @@ useEffect(() => {
                 width="800px"
               />
             </div>
-            <p style={{paddingBottom:"0px"}}>{articleData[0].text}</p>
-           
+            <p style={{paddingBottom:"0px"}}>{articleData[0].description}</p>
+            <p style={{paddingBottom:"0px"}}>{articleData[0].content}</p>
+
             <div>
               <div className="click" onClick={click}>click to read full article</div>
             </div>

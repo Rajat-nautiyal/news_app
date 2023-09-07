@@ -32,11 +32,11 @@ export const MainPage = () => {
     } else if (type === `Technology`) {
       API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=Technology.`;
     } else if (type === `Education`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=Education.`;
     }else if (type === `india`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=india.`;
     }else if (type === `france`) {
-      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
+      API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=france.`;
     }else if (type === `japan`) {
       API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
     }else if (type === `USA`) {
@@ -50,7 +50,7 @@ export const MainPage = () => {
     }else if (type === `britain`) {
       API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.`;
     }
-    else{ API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea.6`
+    else{ API = `https://api.worldnewsapi.com/search-news?api-key=a3fd4e534caf46b9a25f375049c128de&text=korea`
           setSelectedArticle(null) };
 
     try {

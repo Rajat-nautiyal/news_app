@@ -48,13 +48,13 @@ export const MainPage = () => {
     }else if (type === `britain`) {
       API = `https://gnews.io/api/v4/top-headlines?country=gb&lang=en&apikey=9d95187d657b5c056be45553cbece5ce`;
     }
-    else{ API = `https://gnews.io/api/v4/search?q=world&lang=en&min=10&apikey=9d95187d657b5c056be45553cbece5ce`
+    else{ API = `https://api.worldnewsapi.com/search-news?number=20&api-key=a3fd4e534caf46b9a25f375049c128de&text=us`
           setSelectedArticle(null) };
-
+          // https://gnews.io/api/v4/search?q=world&lang=en&min=10&apikey=9d95187d657b5c056be45553cbece5ce
     try {
       const response = await fetch(API);
       const data = await response.json();
-      setData(data.articles); //passing fetched data to articleData(which is used in useState)
+      setData(data.news); //passing fetched data to articleData(which is used in useState)
       setSelectedArticle(null)
     } catch (error) {
       console.log(error);

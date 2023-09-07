@@ -171,7 +171,7 @@ body{
     
     padding-top:50px ;
     left: 870px;
-    top:55px;
+    top:88px;
     overflow-y: scroll;
     font-weight: 900;
     background-color: rgba(194, 218, 239, 0.934);
@@ -273,7 +273,6 @@ body{
   
 .NavNheader {
     display: flex;
-    position: sticky;
     top: 0px;
     z-index: 1;
     align-items: center;

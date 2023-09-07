@@ -56,7 +56,7 @@ export const MainPage = () => {
     try {
       const response = await fetch(API);
       const data = await response.json();
-      setData(data.articles); //passing fetched data to articleData(which is used in useState)
+      setData(data.news); //passing fetched data to articleData(which is used in useState)
       setSelectedArticle(null)
     } catch (error) {
       console.log(error);

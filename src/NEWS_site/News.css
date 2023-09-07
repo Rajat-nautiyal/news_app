@@ -273,6 +273,7 @@ body{
   
 .NavNheader {
     display: flex;
+    position: sticky;
     top: 0px;
     z-index: 1;
     align-items: center;

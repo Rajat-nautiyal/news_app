@@ -1,19 +1,392 @@
-.Navbar li::before{
-    content: '';
-    color:rgba(0, 0, 0, 0.565);
+
+  @media only screen and (min-width: 1026px) and (max-width: 2560px){
+
+      .image{
+          width:90%;
+          height: 350px;
+      }
+
+      .mob_Top_headlines{
+        display: none;
+      }
+  
+    
+    .dropdown:hover #content::before{
+        content: '▼';
+    }
+    
+    .country{  
+      display: flex;
+      cursor: pointer;
+    }
+    
+    .country:hover #content::before {
+      content: '▼';
+      cursor: pointer;
+    }
+    
+     #content::before {
+      color: rgb(209, 213, 250);
+      position:relative;
+      content: '▶';
+    }
+    
+    
+    p{
+      padding-top: 10px;
+      margin: 0;
+      font-weight: 500;
+      font-family: auto;
+      padding-bottom: 10px;
+      word-break: break-word;
+      width: 90%;
+      line-height: 27px;
+    }
+    
+    
+    
+    
+    .title{
+      margin: 0px;
+      padding-top: 20px;
+      padding-bottom: 18px;
+      font-family: none;
+      font-weight: 800;
+    
+    }
+     
+    .header{
+        text-align: center;
+    }
+    html,body{
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+    }
+    .click:hover{
+      color: blue;
+      cursor: pointer;
+      text-decoration: underline;
+    
+    
+    }
+    .click{
+      color: blue;
+      width: fit-content;
+    }
+    .click:active{
+      color: rgb(0, 145, 255);
+    }
+
+    .Top-Headline{
+        margin: 0px;
+           /* padding-left: 90px; */
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        text-align: center;
+        font-size: 1.3rem;
+        font-family: serif;
+        color:white;
+        font-weight: 600;
+        /* background-color:  rgba(93, 89, 89, 0.859); */
+        padding : 9px 50px;  
+        position: relative;
+
+    }
+    .parent-TH{
+      background-color:  rgba(93, 89, 89, 0.859);
+      position: relative;
+      width: 30%;
+      border-radius: 10px;
+      box-shadow: 10px 3px 5px rgb(39, 39, 39);
+
+    }
+
+    .quickGlance{
+        margin: 0px;
+        padding-bottom: 3px;
+        font-family: ui-serif;
+        background-color: rgb(185 110 9);
+        color: #ffffff;
+    }
+    
+    .dropdown-content {
+      
+      position: absolute;
+      background-color: #ffffffab;
+      border-radius: 10px;
+      opacity: 0;
+      height: 0px;
+      -webkit-transition:   height 0.55s ease;
+      -moz-transition: height 0.55s ease;
+      -o-transition: height 0.55s ease;
+      transition: height 0.55s ease;
+      left: 0px;
+      padding-left: 30px;
+      visibility: hidden;
+      overflow-y: scroll;
+      border: 0.3px solid rgb(139, 138, 138);
+      box-shadow: 3px 2px 4px rgb(92, 92, 92);    
+    
+    }
+    
+    
+    .dropdown-content div{  
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1.2rem;
+      text-align: center;
+      opacity: 0;
+      letter-spacing: 2px;
+      border-radius: 25px;
+      padding: 11px 26px 11px;
+      transform: translateX(-30px);
+      -webkit-transition: opacity 2s ease 0s,background-color 1s ease ,transform 0.50s ease;
+      -moz-transition: opacity 2s ease 0s ,background-color 1s ease , transform 0.50s ease;
+      -o-transition:   opacity 2s ease 0s,background-color 1s ease ,transform 0.50s ease;
+      transition:   opacity 2s ease 0s,background-color 1s ease ,transform 0.50s ease;
+      
+     }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+      background-color: rgb(245, 243, 243);
+      opacity: 1;
+      height: 210px;
+      cursor: pointer;
+      color: black;
+      transform: translateY(0);
+      visibility: visible;
+    }
+    .dropdown:hover .dropdown-content>div{
+        opacity: 1;
+    }
+    .dropdown .dropdown-content div:hover {
+        color: red;
+        transform: translateX(0);
+        background-color: gainsboro;
+    
+    }
+
+    .dropdown-content::-webkit-scrollbar{
+      width: 0px;
+    }
+
+    .dropdown-content::-webkit-scrollbar-thumb{
+      background-color: transparent;
+    }
+    .dropdown-content::-webkit-scrollbar-track {
+      background-color: transparent; 
+      scroll-behavior: smooth;
+  }
+
+  
+    .Navbar::-webkit-scrollbar{
+      height: 3px;
+    }    
+    
+    .Navbar::-webkit-scrollbar-track {
+      background-color: transparent; 
+      scroll-behavior: smooth;
+    }
+
+  .Navbar::-webkit-scrollbar-thumb {
+    background-color: transparent; 
+  }
+
+  .Navbar:hover {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.358) transparent; /* For Firefox */
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.285);
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
+
+    .AllinOneHeadings::-webkit-scrollbar {
+        height: 3px; 
+      }
+      
+    .AllinOneHeadings::-webkit-scrollbar-thumb {
+        background-color: transparent; 
+      }
+      
+    .AllinOneHeadings::-webkit-scrollbar-track {
+        background-color: transparent; 
+        scroll-behavior: smooth;
+    }
+    .AllinOneHeadings{
+        display: grid; 
+        justify-content: end;
+        position: absolute;
+        max-height: 114%;
+        left: 70%;
+        top:88px;
+        overflow-y: scroll;
+        font-weight: 900;
+        background-color: rgba(194, 218, 239, 0.934);
+        font-family: math;
+        font-size: 1.4rem;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        gap: 20px; 
+        width: 30%;
+        
+       
+    }
+    .eachHeading{
+          margin : 0px;
+          width: 100%;
+          word-spacing: 3.5px;
+          padding-left: 5px;   
+          padding-top: 3px;   
+    }
+    .articleTitle{
+      word-break: break-word;
+    }
+    .paraNheadings{
+        display: flex;
+       
+    }
+    .NewsPara {
+      position: absolute;
+      width: 70%;
+      padding-left: 20px;
+      top: 90px; /* Remove it when adding background Pic for News Paragraph */
+      overflow-y: scroll;
+      overflow-x: hidden;
+      font-size: 1.3em;
+      font-family: revert;
+      /* text-align: justify; */
+  
+  
+    }
+    
+    .NewsPara::-webkit-scrollbar{
+      width:6px;
+      background-color: transparent;
+    }
+    .NewsPara::-webkit-scrollbar-track {
+     
+      scroll-behavior: smooth;
+  }
+  
+  .Navbar{
+      margin : 0px;
+      gap: 16.67%;
+      padding-left: 20px;
+      display : flex; 
+      align-items: center;
+      list-style-type : none;
+      padding-top : 10px;  
+      font-family: inherit;
+      color:aliceblue;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      /* position: sticky; */
+      width: 70%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      line-height: 20px;
+
+  }
+  
+  
+  
+  
+  .parentElement {
+      height: 100vh; /* Specify an appropriate height(to set sticky pos.)*/
+    }
+    
+  .NavNheader {
+      display: flex;
+      position: sticky;
+      top: 0px;
+      z-index: 1;
+      align-items: center;
+      border:2px solid transparent;
+      background-color: rgb(250, 59, 90);
+      justify-content: space-between;
+      gap: 10px;
+  
+      
+    }
+    nav li:hover{
+      cursor:pointer;
+     color :antiquewhite;
+     text-decoration: underline;
+    }
+  
+  .publishDate{
+    font-size: small;
+    padding: 2px 0px 0px 0px;
+    color: #666666;  
+    text-decoration:none ;
+  }
+
+  .eachHeading:hover .articleTitle{
+    text-decoration: underline;
+    cursor:pointer;
+    color: rgb(220, 33, 33);
+ }
+ .eachHeading:hover .publishDate{
+  cursor:pointer;
+  color: #7f7f7f;  
+  
 }
+
+ 
+    
+  }
+    
+    
+      
+  
+
+@media only screen and (max-width: 1025px){
+  *{
+    margin:0%
+  }
+
+  html,body{
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  }
+
+/* .Navbar::-webkit-scrollbar{
+  width: 0px;
+} */
+
+.Navbar::-webkit-scrollbar-thumb{
+  background-color: transparent;
+}
+.Navbar::-webkit-scrollbar-track {
+  background-color: transparent; 
+  scroll-behavior: smooth;
+}
+
+
+
 
 .dropdown:hover #content::before{
     content: '▼';
 }
 
 .country{  
-  display: flex;
-  cursor: pointer;
+  position: relative;
+  color:aliceblue;
+  /* padding-left:90px */
+
 }
 
 .country-child{
-  padding-left: 16px;
+  color:aliceblue;
+  padding: 0px 0px 0px 17px;
+
 }
 .country:hover #content::before {
   content: '▼';
@@ -27,35 +400,18 @@
 }
 
 
-p{
-  padding-top: 10px;
-  margin: 0;
-  font-weight: 500;
-  font-family: auto;
-  padding-bottom: 10px;
-}
-
-
-
-
 .title{
-  margin: 0px;
-  padding-top: 20px;
-  padding-bottom: 18px;
-  font-family: none;
-  font-weight: 800;
+    padding: 13px 0px 6px;
+
+    font-size: 1.25rem;
 
 }
-
-
 
 .header{
-    text-align: center;
+  position: sticky;
+  top: 0px;
 }
-body{
-    margin: 0px;
-    max-height: 100vh;
-}
+
 .click:hover{
   color: blue;
   cursor: pointer;
@@ -65,38 +421,44 @@ body{
 }
 .click{
   color: blue;
+  padding: 3px 0px 30px;
+  width: fit-content;
+  font-size: 1.05rem;
 }
 .click:active{
   color: rgb(0, 145, 255);
 }
 .Top-Headline{
-    margin: 0px;
-       /* padding-left: 90px; */
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    text-align: center;
-    font-size: 1.3rem;
-    font-family: serif;
-    color:white;
-    font-weight: 600;
-    background-color:  rgba(93, 89, 89, 0.859);   ;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 50px;
-    padding-right: 50px;    
-    box-shadow: 10px 3px 5px black;   
+  display: none;
 }
 .quickGlance{
-    margin: 0px;
-    padding-bottom: 3px;
-    font-family: ui-serif;
-    background-color: rgb(185 110 9);
+    font-family: serif;
+    background-color: rgb(190, 111, 6);
     color: #ffffff;
+    letter-spacing: 0.9px;
+    text-align: center;
+    padding: 5px 0px;
+    font-size: 1.8rem;
 }
 
+.publishDate{
+  font-size: small;
+  padding: 2px 0px 0px 0px;
+  color: #666666;  
+  text-decoration: none;
+}
+.image{
+    width:100%;
+    padding: 5px 0px;
+}
+.imageHeadings{
+    /* width:50%; */
+    padding-left: 1px;
+
+}
 .dropdown-content {
   position: absolute;
-  background-color: #ffffffab;
+  background-color: #cdcdcde4;
   border-radius: 10px;
   opacity: 0;
   height: 0px;
@@ -107,6 +469,9 @@ body{
   left: 0px;
   padding-left: 30px;
   visibility: hidden;
+  overflow-y: scroll;
+  border: 0.3px solid rgb(139, 138, 138);
+  box-shadow: 4px 2px 4px rgb(92, 92, 92);
 
 }
 
@@ -116,9 +481,9 @@ body{
   font-size: 1.2rem;
   text-align: center;
   opacity: 0;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   border-radius: 25px;
-  padding-right: 30px;
+  padding-right: 10px;
   padding-left: 15px;
   padding-bottom: 6px;
   padding-top: 6px;
@@ -151,68 +516,42 @@ body{
 }
 
 
-.AllinOneHeadings::-webkit-scrollbar {
-    width: 6px; /* Set the width of the scrollbar */
-  }
-  
-.AllinOneHeadings::-webkit-scrollbar-thumb {
-    background-color: transparent; /* Set the color of the scrollbar thumb */
-  }
-  
-.AllinOneHeadings::-webkit-scrollbar-track {
-    background-color: transparent; 
-    scroll-behavior: smooth;
-}
 .AllinOneHeadings{
-    display: grid;  
-    justify-content: end;
-    position: absolute;
-    height: 100vh;
-    
-    padding-top:50px ;
-    left: 870px;
-    top:88px;
-    overflow-y: scroll;
-    font-weight: 900;
-    background-color: rgba(194, 218, 239, 0.934);
-    font-family: math;
-    padding-left: 5px;
-    font-size: 1.4rem;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    gap: 20px; /* responsive critical part */
-    
-   
+   padding: 20px 5px 0px;
+   gap: 7px;
+   display: flex;
+   flex-direction: column;
 }
 .eachHeading{
-      margin : 0px;
-      width: 30vw;
-      word-spacing: 3.5px;
-      
-  
-}
-.paraNheadings{
+    padding: 6px 0px;  
+    background-color: rgb(212, 232, 249);
+    border-radius: 7px;
+    border: 0.5px solid rgb(139, 159, 176);
+    box-shadow: 4px 3px 4.5px rgb(119, 136, 151);;   
+    gap: 10px;
     display: flex;
-   
-}
-
-  
-.NewsPara {
-    position: absolute;
-    width: 800px;
-    padding-left: 20px;
-    top: 90px; /* Remove it when adding background Pic for News Paragraph */
-    overflow-y: scroll;
-    overflow-x: hidden;
-    font-size: 1.3em;
-    font-family: revert;
-    max-height: 100vh;
-
   }
-  
-  .parent-top-headline{
-    position: absolute;
-    left:920px;
+
+  .mob_Top_headlines{
+    padding: 8px 0px;
+    text-align: center;
+    font-family: serif;
+    color:white;
+    font-weight: 600;
+    background-color:  rgba(93, 89, 89, 0.859);
+    box-shadow: 5px 2px 7px rgb(0, 0, 0); 
+    border: 0.5px solid rgb(80, 80, 80);  
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .NewsPara {
+    line-height: 25px;
+    max-width: 100%;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   padding: 10px 10px;
 
   }
 
@@ -226,60 +565,36 @@ body{
 }
 
 .Navbar{
-    margin : 0px;
-    gap: 95px;
-    padding-left: 20px;
-    display : flex; 
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    list-style-type : none;
-    padding-top : 10px;  
-    padding-bottom:10px ;
-    font-family: inherit;
+    list-style-type: none;
+    font-family: sans-serif;
+    line-height: 42px;
+    font-weight: 400;
+    font-size: 1.15rem;
     color:aliceblue;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
- 
+    background-color: rgb(255, 68, 99);
+    overflow-x: scroll;
+    column-gap: 16%;
+    border: 0.4px solid rgb(251, 39, 74);
+    letter-spacing: 0.6px;
+    width: 100%;
+    
 }
-
-  @media only screen and (max-width: 1105px){
-     *{
-      box-sizing: border-box;
-     }
-      .NavNheader{
-        padding-right: 1100px;
-      }
-      .eachHeading{
-        width: 220px;
-      }
-      .header{
-        width: 1103px; 
-      }
-      .parent-top-headline {
-        position: absolute;
-        left: 880px;
-      }
-      .Top-Headline{
-        padding-top: 4px;
-        padding-bottom: 4px;
-        box-shadow: none;
-      }
-      }
-  
-
 
 .parentElement {
     height: 100vh; /* Specify an appropriate height(to set sticky pos.)*/
   }
   
 .NavNheader {
-    display: flex;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    align-items: center;
-    border:2px solid transparent;
-    background-color: rgb(250, 59, 90);
 
+  display: flex;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  align-items: center;
+  background-color: rgb(250, 59, 90);
     
   }
   nav li:hover{
@@ -288,11 +603,40 @@ body{
    text-decoration: underline;
   }
 
-.eachHeading:hover{
+.eachHeading:hover .articleTitle{
    text-decoration: underline;
    cursor:pointer;
    color: rgb(220, 33, 33);
 }
 
+}
+
+.parentElement {
+  height: 100vh; /* Specify an appropriate height(to set sticky pos.)*/
+}
+
+.NavNheader {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  align-items: center;
+  border:2px solid transparent;
+  background-color: rgb(250, 59, 90);
+
   
-  
+}
+nav li:hover{
+  cursor:pointer;
+ color :antiquewhite;
+ text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 343px){
+
+  .imageHeadings{
+    width:50%
+  }
+
+}

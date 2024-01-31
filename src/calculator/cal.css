@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    text-align:center;
+    min-height: 300px;
+    box-shadow: 20px 10px 10px black;
+    width: 25vw;
+    background-color:aquamarine ;
+}
+
+button{
+    padding: 10px;
+    border-radius: 7px;
+    width: 6vw;
+}
+
+.current{
+    min-height: 40px;
+    border: 5px solid blueviolet;
+    width: 25vw;
+    word-break: break-all;
+    font-size: 1.3em;
+    border-radius: 5px;
+
+}

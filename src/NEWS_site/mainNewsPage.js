@@ -56,7 +56,7 @@ export const MainPage = () => {
         API = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&apikey=${process.env.REACT_APP_API_KEY}`;
         break;
         case "japan":
-        API = `https://gnews.io/api/v4/top-headlines?country=jp&lang=en&apikey=${process.env.REACT_APP_API_KEY}`;
+        API = `https://gnews.io/api/v4/top-headlines?country=jpn&lang=en&apikey=${process.env.REACT_APP_API_KEY}`;
         break;
         case "singapore":
         API = `https://gnews.io/api/v4/top-headlines?country=sg&lang=en&apikey=${process.env.REACT_APP_API_KEY}`;
